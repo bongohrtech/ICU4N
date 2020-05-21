@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework></TargetFramework>
     <!--netstandard2.0;-->
-    <TargetFrameworks>netstandard1.4;net451;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;netstandard1.4;net451;net40</TargetFrameworks>
     <RootNamespace>ICU4N</RootNamespace>
   </PropertyGroup>
 

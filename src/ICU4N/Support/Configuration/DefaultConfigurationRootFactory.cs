@@ -1,5 +1,5 @@
 ﻿
-#if !NET40
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
 using System;
 using System.Collections;
 using System.Collections.Generic;

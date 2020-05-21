@@ -1,5 +1,5 @@
 ﻿
-#if !NET40
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
 using Microsoft.Extensions.Configuration;
 #endif
 using System;
@@ -27,7 +27,7 @@ namespace ICU4N.Configuration
     [CLSCompliant(false)]
     public interface IConfigurationRootFactory
     {
-#if !NET40        
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION        
         IConfigurationRoot CreateConfiguration();
 #endif
     }

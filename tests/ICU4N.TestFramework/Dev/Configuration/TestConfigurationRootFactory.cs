@@ -15,7 +15,7 @@
 //     * limitations under the License.
 //     */
 
-#if !NET40 
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION 
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Concurrent;

@@ -1,5 +1,5 @@
 ﻿
-#if !NET40
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
 using ICU4N.Configuration;
 using Microsoft.Extensions.Configuration;
 using System;

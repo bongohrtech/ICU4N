@@ -67,10 +67,10 @@ namespace ICU4N.Dev.Test
 
         private static readonly TestParams testParams = TestParams.Create();
 
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
         [CLSCompliant(false)]
         public static IConfigurationRootFactory ConfigurationFactory { get; set; }
 
-#if !NET40
             = new TestConfigurationRootFactory();
 #endif
         //public static IConfigurationFactory ConfigurationFactory { get; set; } = new DefaultConfigurationFactory(false);

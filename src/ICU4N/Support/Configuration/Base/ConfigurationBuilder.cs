@@ -1,7 +1,7 @@
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-#if !NET40
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -13,8 +13,7 @@ namespace ICU4N.Configuration
     /// </summary>
     internal class ConfigurationBuilder : IConfigurationBuilder
     {
-//#if NETSTANDARD2_X
-#if NETSTANDARD2_0
+#if FEATURE_ICONFIGURATION_PROPERTY_SUPPORTED
         /// <summary>
         /// Returns the sources used to obtain configuration values.
         /// </summary>
@@ -25,7 +24,7 @@ namespace ICU4N.Configuration
         /// and the registered <see cref="IConfigurationProvider"/>s.
         /// </summary>
         public IDictionary<string, object> Properties { get; } = new Dictionary<string, object>();
-#elif NET45 || NET451 || NETSTANDARD1_3  //|| NETSTANDARD2_0
+#else
         private Dictionary<string, object> _properties = new Dictionary<string, object>();
 
         private IList<IConfigurationSource> _sources = new List<IConfigurationSource>();

@@ -1,7 +1,7 @@
 // Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
-#if !NET40
+#if FEATURE_MICROSOFT_EXTENSIONS_CONFIGURATION
 using Microsoft.Extensions.Configuration;
 
 namespace ICU4N.Configuration
